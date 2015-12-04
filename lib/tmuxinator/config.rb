@@ -5,9 +5,9 @@ module Tmuxinator
 
     class << self
       def root
-        root_dir = File.expand_path("~/.tmuxinator")
-        Dir.mkdir("#{ENV['HOME']}/.tmuxinator") unless File.directory?(root_dir)
-        "#{ENV['HOME']}/.tmuxinator"
+        # root_dir = File.expand_path("~/.tmuxinator")
+        # Dir.mkdir("#{ENV['HOME']}/.tmuxinator") unless File.directory?(root_dir)
+        "#{ENV['TMUXINATOR_HOME']}"
       end
 
       def sample
